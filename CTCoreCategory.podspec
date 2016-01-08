@@ -13,7 +13,13 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '4.3'
   s.requires_arc = true
 
-  s.source_files = 'CTCoreCategory/**/*.{h,m}'
+  s.public_header_files = 'CTCoreCategory/Category.h'
+  s.source_files = 'CTCoreCategory/Category.h'
 
   s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit'
+
+  s.subspec 'Security' do |ss|
+    ss.source_files = 'CTCoreCategory/NSArray+Extend.{h.m}'
+    ss.public_header_files = 'AFNetworking/NSArray+Extend.h'
+  end
 end
