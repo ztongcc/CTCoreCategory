@@ -24,17 +24,17 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'NSDate' do |ss|
-    ss.source_files = 'CTCoreCategory/**/NSDate+{AdditionalExtend,Extend}.{h,m}’
+    ss.source_files = 'CTCoreCategory/**/NSDate+{AdditionalExtend,Extend}.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/NSDate+{AdditionalExtend,Extend}.h'
   end
 
   s.subspec 'NSDictionary' do |ss|
-    ss.source_files = 'CTCoreCategory/**/NSMutableDictionary+BBExtensions.{h,m}’
+    ss.source_files = 'CTCoreCategory/**/NSMutableDictionary+BBExtensions.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/NSMutableDictionary+BBExtensions.h'
   end
 
   s.subspec 'NSObject' do |ss|
-    ss.source_files = 'CTCoreCategory/**/NSObject+property.{h,m}’
+    ss.source_files = 'CTCoreCategory/**/NSObject+property.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/NSObject+property.h'
   end
 end
