@@ -37,4 +37,24 @@ Pod::Spec.new do |s|
     ss.source_files = 'CTCoreCategory/**/NSObject+property.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/NSObject+property.h'
   end
+
+  s.subspec 'NSString' do |ss|
+    ss.source_files = 'CTCoreCategory/**/NS{DataAES,String+Extend,String+Password,String+PJR}.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/NS{DataAES,String+Extend,String+Password,String+PJR}.h'
+  end
+
+  s.subspec 'UIAlertView' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UIAlertView+Additional.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIAlertView+Additional.h'
+  end
+
+  s.subspec 'UIController' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UIViewController+Extend.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIViewController+Extend.h'
+  end
+
+  s.subspec 'UINavigationController' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.h'
+  end
 end
