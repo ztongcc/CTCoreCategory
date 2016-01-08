@@ -57,4 +57,19 @@ Pod::Spec.new do |s|
     ss.source_files = 'CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.h'
   end
+
+  s.subspec 'UIImage' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.h'
+  end
+
+   s.subspec 'UITableViewCell' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UITableViewCell+Extend.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UITableViewCell+Extend.h'
+  end
+
+  s.subspec 'UIView' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UIView+Extend.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIView+Extend.h'
+  end
 end
