@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '4.3'
   s.requires_arc = true
 
-  s.public_header_files = 'CTCoreCategory/Category.h'
-  s.source_files = 'CTCoreCategory/Category.h'
+  s.public_header_files = 'CTCoreCategory/CTCoreCategory.h'
+  s.source_files = 'CTCoreCategory/CTCoreCategory.h'
 
   s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit'
 
