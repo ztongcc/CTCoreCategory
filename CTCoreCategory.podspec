@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CTCoreCategory"
-  s.version      = “0.0.2"
+  s.version      = "0.0.2"
   s.summary      = "UIView的扩展"
   s.description  = <<-DESC
                      一个UIView的扩展
