@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit'
 
   s.subspec 'NSArray' do |ss|
-    ss.source_files = 'CTCoreCategory/NSArray+Extend.{h.m}'
+    ss.source_files = 'CTCoreCategory/NSArray+Extend.{h,m}’
     ss.public_header_files = 'CTCoreCategory/NSArray+Extend.h'
   end
 end
