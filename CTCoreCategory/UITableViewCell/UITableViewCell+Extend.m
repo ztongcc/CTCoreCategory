@@ -20,7 +20,7 @@
     return cell;
 }
 
-+ (instancetype)ct_cellWithTableView:(UITableView *)tableView cellStyle:(UITableViewCellStyle)style indentifier:(NSString *)indentifier
++ (instancetype)ct_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style indentifier:(NSString *)indentifier
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
     if (cell == nil) {
