@@ -24,7 +24,7 @@
 {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:indentifier];
+        cell = [[[self class] alloc] initWithStyle:style reuseIdentifier:indentifier];
     }
     return cell;
 }
