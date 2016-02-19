@@ -28,5 +28,13 @@
     }
     return cell;
 }
-
++ (instancetype)ct_cellDefaultWithTableView:(UITableView *)tableView indentifier:(NSString *)indentifier
+{
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:indentifier];
+    if (cell == nil) {
+        cell = [[[self class] alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indentifier];
+    }
+    return cell;
+    
+}
 @end

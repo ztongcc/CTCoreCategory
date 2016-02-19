@@ -30,5 +30,14 @@
  *  @return cell实例
  */
 + (instancetype)ct_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style indentifier:(NSString *)indentifier;
+/**
+ *  创建 cell
+ *
+ *  @param tableView    所属tableView
+ *  @param indentifier indentifier
+ *
+ *  @return cell实例
+ */
++ (instancetype)ct_cellDefaultWithTableView:(UITableView *)tableView indentifier:(NSString *)indentifier;
 
 @end
