@@ -41,7 +41,7 @@
  
  */
 
-#import "ImageEffects.h"
+#import "UIImage+Effects.h"
 
 @import Accelerate;
 

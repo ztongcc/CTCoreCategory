@@ -20,7 +20,7 @@
 #import "NSString+PJR.h"
 #import "NSDataAES.h"
 #import "UIAlertView+Additional.h"
-#import "ImageEffects.h"
+#import "UIImage+Effects.h"
 #import "UIImage+Color.h"
 #import "UIImage+Cut.h"
 #import "UIImage+Extend.h"
