@@ -10,6 +10,12 @@
 
 @implementation UIViewController (NavigationItem)
 
+- (void)initNavigationTitleView:(UIView *(^)(void))customView
+{
+    UIView * titleView = customView();
+    self.navigationItem.titleView = titleView;
+}
+
 - (void)initLeftNavigationItemWithTitle:(NSString *)title
                                  target:(id)target
                                  action:(SEL)action
