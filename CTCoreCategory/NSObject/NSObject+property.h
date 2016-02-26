@@ -39,4 +39,21 @@
  */
 - (NSDictionary *)dictionaryOfRuntimePropertiesWithFilter:(NSArray * (^)())filter;
 
+/**
+ *  Method Swizzle黑魔法
+ *
+ *  @param sourceSel  原方法
+ *  @param ofClass    替代类名
+ *  @param toSelector 替代方法
+ */
++ (void)MethodSwizzleSelector:(SEL)sourceSel withClass:(Class)ofClass selector:(SEL)toSelector;
+
+/**
+ *  Method Swizzle黑魔法
+ *
+ *  @param sourceSel  原方法
+ *  @param toSelector 替代方法
+ */
++ (void)MethodSwizzleSelector:(SEL)sourceSel withSelector:(SEL)toSelector;
+
 @end

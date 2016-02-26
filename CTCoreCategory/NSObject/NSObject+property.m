@@ -70,4 +70,54 @@
     }
 }
 
++ (void)MethodSwizzleSelector:(SEL)sourceSel withClass:(Class)ofClass selector:(SEL)toSelector
+{
+    if (sourceSel == nil || toSelector == nil || ofClass == nil) {
+        return;
+    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = self.class;
+        Method source = class_getInstanceMethod(class, sourceSel);
+        Method result = class_getInstanceMethod(ofClass, toSelector);
+        
+        IMP source_imp = method_getImplementation(source);
+        IMP result_imp = method_getImplementation(result);
+        
+        //添加实现，但不会覆盖之前的实现
+        BOOL didAddMethod = class_addMethod(class, sourceSel, result_imp, method_getTypeEncoding(result));
+        if (didAddMethod) {
+            class_replaceMethod(ofClass, toSelector, source_imp, method_getTypeEncoding(source));
+        } else {
+            method_exchangeImplementations(source, result);
+        }
+    });
+}
+
+
++ (void)MethodSwizzleSelector:(SEL)sourceSel withSelector:(SEL)toSelector
+{
+    if (sourceSel == nil || toSelector == nil) {
+        return;
+    }
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = self.class;
+        Method source = class_getInstanceMethod(class, sourceSel);
+        Method result = class_getInstanceMethod(class, toSelector);
+        
+        IMP source_imp = method_getImplementation(source);
+        IMP result_imp = method_getImplementation(result);
+        
+        //添加实现，但不会覆盖之前的实现
+        BOOL didAddMethod = class_addMethod(class, sourceSel, result_imp, method_getTypeEncoding(result));
+        if (didAddMethod) {
+            class_replaceMethod(class, toSelector, source_imp, method_getTypeEncoding(source));
+        } else {
+            method_exchangeImplementations(source, result);
+        }
+    });
+}
+
+
 @end
