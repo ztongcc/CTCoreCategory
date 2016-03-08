@@ -24,4 +24,8 @@ UIViewController * InstantiateViewControllerFromXIB(Class VCClassName);
 
 - (UIViewController *)presentXIBViewController:(Class)VCClassName;
 
+- (void)popViewController;
+
+- (void)popToViewController:(Class)VCClassName;
+
 @end

@@ -72,5 +72,25 @@ UIViewController * InstantiateViewControllerFromXIB(Class VCClassName)
     return vc;
 }
 
+- (void)popViewController
+{
+    if (self.navigationController && self.navigationController.viewControllers.count != 0) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)popToViewController:(Class)VCClassName
+{
+    if (self.navigationController && self.navigationController.viewControllers.count != 0) {
+        NSArray * controllerAry = self.navigationController.viewControllers;
+        if (controllerAry.count != 1) {
+            [controllerAry enumerateObjectsUsingBlock:^(UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([obj isMemberOfClass:[VCClassName class]]) {
+                    [self.navigationController popToViewController:obj animated:YES];
+                }
+            }];
+        }
+    }
+}
 
 @end
