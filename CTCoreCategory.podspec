@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Evan-CT/CTCoreCategory"
   s.license      = 'MIT'
   s.author       = { "Evan.Cheng" => "Evan_Tong@163.com" }
-  s.source       = { :git => "https://github.com/Evan-CT/CTCoreCategory.git", :tag =>  s.version }
+  s.source       = { :git => "https://github.com/Excalibur-CT/CTCoreCategory.git", :tag =>  s.version }
 
   s.platform     = :ios, '4.3'
   s.requires_arc = true
