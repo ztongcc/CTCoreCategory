@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                      一个UIView的扩展
                    DESC
-  s.homepage     = "https://github.com/Evan-CT/CTCoreCategory"
+  s.homepage     = "https://github.com/Excalibur-CT/CTCoreCategory"
   s.license      = 'MIT'
   s.author       = { "Evan.Cheng" => "Evan_Tong@163.com" }
   s.source       = { :git => "https://github.com/Excalibur-CT/CTCoreCategory.git", :tag =>  s.version }
