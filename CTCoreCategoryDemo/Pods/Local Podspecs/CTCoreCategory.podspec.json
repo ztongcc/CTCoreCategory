@@ -1,0 +1,83 @@
+{
+  "name": "CTCoreCategory",
+  "version": "0.0.2",
+  "summary": "UIView的扩展",
+  "description": "一个UIView的扩展",
+  "homepage": "https://github.com/Excalibur-CT/CTCoreCategory",
+  "license": "MIT",
+  "authors": {
+    "Evan.Cheng": "Evan_Tong@163.com"
+  },
+  "source": {
+    "git": "https://github.com/Excalibur-CT/CTCoreCategory.git",
+    "tag": "0.0.2"
+  },
+  "platforms": {
+    "ios": "4.3"
+  },
+  "requires_arc": true,
+  "public_header_files": "CTCoreCategory/CTCoreCategory.h",
+  "source_files": "CTCoreCategory/CTCoreCategory.h",
+  "frameworks": [
+    "Foundation",
+    "CoreGraphics",
+    "UIKit"
+  ],
+  "subspecs": [
+    {
+      "name": "NSArray",
+      "source_files": "CTCoreCategory/**/NSArray+Extend.{h,m}",
+      "public_header_files": "CTCoreCategory/**/NSArray+Extend.h"
+    },
+    {
+      "name": "NSDate",
+      "source_files": "CTCoreCategory/**/NSDate+{AdditionalExtend,Extend}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/NSDate+{AdditionalExtend,Extend}.h"
+    },
+    {
+      "name": "NSDictionary",
+      "source_files": "CTCoreCategory/**/NSMutableDictionary+BBExtensions.{h,m}",
+      "public_header_files": "CTCoreCategory/**/NSMutableDictionary+BBExtensions.h"
+    },
+    {
+      "name": "NSObject",
+      "source_files": "CTCoreCategory/**/NSObject+property.{h,m}",
+      "public_header_files": "CTCoreCategory/**/NSObject+property.h"
+    },
+    {
+      "name": "NSString",
+      "source_files": "CTCoreCategory/**/NS{DataAES,String+Extend,String+Password,String+PJR}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/NS{DataAES,String+Extend,String+Password,String+PJR}.h"
+    },
+    {
+      "name": "UIAlertView",
+      "source_files": "CTCoreCategory/**/UIAlertView+Additional.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIAlertView+Additional.h"
+    },
+    {
+      "name": "UIController",
+      "source_files": "CTCoreCategory/**/UIViewController+Extend.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIViewController+Extend.h"
+    },
+    {
+      "name": "UINavigationController",
+      "source_files": "CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UINavigationController+FDFullscreenPopGesture.h"
+    },
+    {
+      "name": "UIImage",
+      "source_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.h"
+    },
+    {
+      "name": "UITableViewCell",
+      "source_files": "CTCoreCategory/**/UITableViewCell+Extend.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UITableViewCell+Extend.h"
+    },
+    {
+      "name": "UIView",
+      "source_files": "CTCoreCategory/**/UIView+Extend.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIView+Extend.h"
+    }
+  ]
+}

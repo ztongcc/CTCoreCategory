@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CTCoreCategory"
-  s.version      = "0.0.2"
+  s.version      = "0.0.1"
   s.summary      = "UIView的扩展"
   s.description  = <<-DESC
                      一个UIView的扩展
@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
   s.author       = { "Evan.Cheng" => "Evan_Tong@163.com" }
   s.source       = { :git => "https://github.com/Excalibur-CT/CTCoreCategory.git", :tag =>  s.version }
 
-  s.platform     = :ios, '4.3'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.public_header_files = 'CTCoreCategory/CTCoreCategory.h'
   s.source_files = 'CTCoreCategory/CTCoreCategory.h'
 
-  s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit'
+  s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit', 'Accelerate'
 
   s.subspec 'NSArray' do |ss|
     ss.source_files = 'CTCoreCategory/**/NSArray+Extend.{h,m}'
@@ -59,8 +59,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UIImage' do |ss|
-    ss.source_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.{h,m}'
-    ss.public_header_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.h'
+    ss.source_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.h'
   end
 
    s.subspec 'UITableViewCell' do |ss|
