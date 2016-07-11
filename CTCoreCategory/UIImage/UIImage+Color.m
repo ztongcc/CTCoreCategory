@@ -35,7 +35,7 @@
     return image;
 }
 
-+(UIImage *)imageFromContextWithColor:(UIColor *)color{
++ (UIImage *)imageFromContextWithColor:(UIColor *)color{
     
     CGSize size=CGSizeMake(1.0f, 1.0f);
     
