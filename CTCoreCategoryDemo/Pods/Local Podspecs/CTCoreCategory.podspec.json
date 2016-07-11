@@ -67,8 +67,8 @@
     },
     {
       "name": "UIImage",
-      "source_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.{h,m}",
-      "public_header_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.h"
+      "source_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.h"
     },
     {
       "name": "UITableViewCell",

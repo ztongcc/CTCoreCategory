@@ -59,8 +59,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UIImage' do |ss|
-    ss.source_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.{h,m}'
-    ss.public_header_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.h'
+    ss.source_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effect}.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effect}.h'
   end
 
    s.subspec 'UITableViewCell' do |ss|
