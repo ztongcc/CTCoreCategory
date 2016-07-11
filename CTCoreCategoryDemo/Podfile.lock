@@ -1,27 +1,27 @@
 PODS:
-  - CTCoreCategory (0.0.2):
-    - CTCoreCategory/NSArray (= 0.0.2)
-    - CTCoreCategory/NSDate (= 0.0.2)
-    - CTCoreCategory/NSDictionary (= 0.0.2)
-    - CTCoreCategory/NSObject (= 0.0.2)
-    - CTCoreCategory/NSString (= 0.0.2)
-    - CTCoreCategory/UIAlertView (= 0.0.2)
-    - CTCoreCategory/UIController (= 0.0.2)
-    - CTCoreCategory/UIImage (= 0.0.2)
-    - CTCoreCategory/UINavigationController (= 0.0.2)
-    - CTCoreCategory/UITableViewCell (= 0.0.2)
-    - CTCoreCategory/UIView (= 0.0.2)
-  - CTCoreCategory/NSArray (0.0.2)
-  - CTCoreCategory/NSDate (0.0.2)
-  - CTCoreCategory/NSDictionary (0.0.2)
-  - CTCoreCategory/NSObject (0.0.2)
-  - CTCoreCategory/NSString (0.0.2)
-  - CTCoreCategory/UIAlertView (0.0.2)
-  - CTCoreCategory/UIController (0.0.2)
-  - CTCoreCategory/UIImage (0.0.2)
-  - CTCoreCategory/UINavigationController (0.0.2)
-  - CTCoreCategory/UITableViewCell (0.0.2)
-  - CTCoreCategory/UIView (0.0.2)
+  - CTCoreCategory (0.0.1):
+    - CTCoreCategory/NSArray (= 0.0.1)
+    - CTCoreCategory/NSDate (= 0.0.1)
+    - CTCoreCategory/NSDictionary (= 0.0.1)
+    - CTCoreCategory/NSObject (= 0.0.1)
+    - CTCoreCategory/NSString (= 0.0.1)
+    - CTCoreCategory/UIAlertView (= 0.0.1)
+    - CTCoreCategory/UIController (= 0.0.1)
+    - CTCoreCategory/UIImage (= 0.0.1)
+    - CTCoreCategory/UINavigationController (= 0.0.1)
+    - CTCoreCategory/UITableViewCell (= 0.0.1)
+    - CTCoreCategory/UIView (= 0.0.1)
+  - CTCoreCategory/NSArray (0.0.1)
+  - CTCoreCategory/NSDate (0.0.1)
+  - CTCoreCategory/NSDictionary (0.0.1)
+  - CTCoreCategory/NSObject (0.0.1)
+  - CTCoreCategory/NSString (0.0.1)
+  - CTCoreCategory/UIAlertView (0.0.1)
+  - CTCoreCategory/UIController (0.0.1)
+  - CTCoreCategory/UIImage (0.0.1)
+  - CTCoreCategory/UINavigationController (0.0.1)
+  - CTCoreCategory/UITableViewCell (0.0.1)
+  - CTCoreCategory/UIView (0.0.1)
 
 DEPENDENCIES:
   - CTCoreCategory (from `https://github.com/Excalibur-CT/CTCoreCategory.git`)
@@ -32,11 +32,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CTCoreCategory:
-    :commit: d3bc977a69d590874d820383c3d096966a21a0c7
+    :commit: 4c37f2ba243a5ae4675db8ec30b7f78522bad4fb
     :git: https://github.com/Excalibur-CT/CTCoreCategory.git
 
 SPEC CHECKSUMS:
-  CTCoreCategory: ea9baac79ea3bf9f7e0ee0dca43ae11e543d6432
+  CTCoreCategory: 995040a2bd0253c8a8cad3c48e128d18d6732ebc
 
 PODFILE CHECKSUM: a9324439fc59357f56fb540c2604cf1a459bb094
 

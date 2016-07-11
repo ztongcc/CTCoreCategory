@@ -1,6 +1,6 @@
 {
   "name": "CTCoreCategory",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "summary": "UIView的扩展",
   "description": "一个UIView的扩展",
   "homepage": "https://github.com/Excalibur-CT/CTCoreCategory",
@@ -10,10 +10,10 @@
   },
   "source": {
     "git": "https://github.com/Excalibur-CT/CTCoreCategory.git",
-    "tag": "0.0.2"
+    "tag": "0.0.1"
   },
   "platforms": {
-    "ios": "4.3"
+    "ios": "7.0"
   },
   "requires_arc": true,
   "public_header_files": "CTCoreCategory/CTCoreCategory.h",
@@ -21,7 +21,8 @@
   "frameworks": [
     "Foundation",
     "CoreGraphics",
-    "UIKit"
+    "UIKit",
+    "Accelerate"
   ],
   "subspecs": [
     {
@@ -66,8 +67,8 @@
     },
     {
       "name": "UIImage",
-      "source_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.{h,m}",
-      "public_header_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water,Effects}.h"
+      "source_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIImage+{Color,Cut,Extend,FixOrientation,Water}.h"
     },
     {
       "name": "UITableViewCell",
