@@ -41,12 +41,10 @@
  
  */
 
-#import "UIImage+Effects.h"
-
+#import "UIImage+Effect.h"
 @import Accelerate;
 
-@implementation UIImage (Effects)
-
+@implementation UIImage (Effect)
 #pragma mark -
 #pragma mark - Effects
 
@@ -254,7 +252,7 @@
             CGContextClipToMask(outputContext, outputImageRectInPoints, maskImage.CGImage);
         CGContextDrawImage(outputContext, outputImageRectInPoints, effectCGImage);
         CGContextRestoreGState(outputContext);
-   
+        
         // Cleanup
         CGImageRelease(effectCGImage);
         free(outputBuffer->data);
@@ -279,7 +277,7 @@
     // Output image is ready.
     UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
- 
+    
     return outputImage;
 #undef ENABLE_BLUR
 #undef ENABLE_SATURATION_ADJUSTMENT
@@ -317,4 +315,3 @@ void cleanupBuffer(void *userData, void *buf_data)
 { free(buf_data); }
 
 @end
-

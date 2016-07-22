@@ -40,13 +40,12 @@
  Copyright (C) 2014 Apple Inc. All Rights Reserved.
  
  */
-
 #import <UIKit/UIKit.h>
 
 FOUNDATION_EXPORT double ImageEffectsVersionNumber;
 FOUNDATION_EXPORT const unsigned char ImageEffectsVersionString[];
 
-@interface UIImage (Effects)
+@interface UIImage (Effect)
 
 - (UIImage *)lightImage;
 - (UIImage *)extraLightImage;
@@ -60,4 +59,3 @@ FOUNDATION_EXPORT const unsigned char ImageEffectsVersionString[];
                         maskImage:(UIImage *)maskImage;
 
 @end
-

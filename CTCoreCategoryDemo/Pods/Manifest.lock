@@ -32,11 +32,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CTCoreCategory:
-    :commit: 8d53f379c2a6d69463e4d098dd4f8fad3fed2d6b
+    :commit: b5be488a0649ffedbac5d394effc4c29d932444d
     :git: https://github.com/Excalibur-CT/CTCoreCategory.git
 
 SPEC CHECKSUMS:
-  CTCoreCategory: be6ff3216317df302e7560154ff1d2d0505d2524
+  CTCoreCategory: 39d4b03959e7ca8927c31d7e18db1ac2892164e4
 
 PODFILE CHECKSUM: a9324439fc59357f56fb540c2604cf1a459bb094
 
