@@ -72,4 +72,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'CTCoreCategory/**/UIView+Extend.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/UIView+Extend.h'
   end
+
+    s.subspec 'NSTimer' do |ss|
+    ss.source_files = 'CTCoreCategory/**/NSTimer+WeakRetain.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/NSTimer+WeakRetain.h'
+    end
+
 end
