@@ -70,4 +70,9 @@ typedef enum{
  */
 + (void)ct_removeViews:(NSArray *)views;
 
+- (CGFloat)ct_alphaInPoint:(CGPoint)point;
+
+- (UIColor *)ct_colorInPoint:(CGPoint)point;
+
+
 @end
