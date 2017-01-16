@@ -30,6 +30,7 @@
 #import "UITableViewCell+Extend.h"
 #import "UIViewController+Extend.h"
 #import "UIView+Extend.h"
+#import "NSTimer+WeakRetain.h"
 #import "NSAttributedString+Attributes.h"
 
 #endif /* Category_h */
