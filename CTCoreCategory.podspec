@@ -43,6 +43,12 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'CTCoreCategory/**/NS{DataAES,String+Extend,String+Password,String+PJR}.h'
   end
 
+
+ s.subspec 'NSMutableAttributedString' do |ss|
+    ss.source_files = 'CTCoreCategory/**/NSMutableAttributedString+Attributes.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/NSMutableAttributedString+Attributes.h'
+  end
+
   s.subspec 'UIAlertView' do |ss|
     ss.source_files = 'CTCoreCategory/**/UIAlertView+Additional.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/UIAlertView+Additional.h'
