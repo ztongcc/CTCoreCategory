@@ -8,12 +8,10 @@
 
 #import "ViewController.h"
 #import <NSMutableAttributedString+Attributes.h>
-#import <TTTAttributedLabel.h>
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *lab;
-@property (nonatomic, strong)TTTAttributedLabel * attlab;
 
 @end
 
@@ -28,23 +26,6 @@
     NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:str]; // assume string exists
     NSRange urlRange = [str rangeOfString:@"@www.apple.com/"];
     
-    self.attlab = [[TTTAttributedLabel alloc] initWithFrame:CGRectMake(20, 20, 210, 300)];
-    _attlab.attributedText = string;
-    _attlab.lineBreakMode = NSLineBreakByCharWrapping;
-    _attlab.numberOfLines = 0;
-    _attlab.delegate = self;
-    _attlab.linkAttributes = @{kTTTBackgroundFillColorAttributeName:[UIColor whiteColor]};
-    _attlab.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.attlab];
-
-    [_attlab addLinkToURL:[NSURL URLWithString:@"http://www.baidu.com"] withRange:urlRange];
-    
-}
-
-- (void)attributedLabel:(TTTAttributedLabel *)label
-   didSelectLinkWithURL:(NSURL *)url
-{
-    NSLog(@"url = %@", url.absoluteString);
 }
 
 - (void)addAttributedStringTextView
