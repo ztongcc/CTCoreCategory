@@ -16,7 +16,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    UIFont* font = [UIFont systemFontOfSize:18];
+    
+    NSDictionary* textAttributes = @{NSFontAttributeName:font,
+                                     NSForegroundColorAttributeName:[UIColor orangeColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.0],NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(-13.0f, 0.0) forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 

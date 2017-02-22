@@ -61,9 +61,9 @@
       "public_header_files": "CTCoreCategory/**/UIAlertView+Additional.h"
     },
     {
-      "name": "UIController",
-      "source_files": "CTCoreCategory/**/UIViewController+Extend.{h,m}",
-      "public_header_files": "CTCoreCategory/**/UIViewController+Extend.h"
+      "name": "UIViewController",
+      "source_files": "CTCoreCategory/**/UIViewController+{Push,NavigationItem}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIViewController+{Push,NavigationItem}.h"
     },
     {
       "name": "UINavigationController",
