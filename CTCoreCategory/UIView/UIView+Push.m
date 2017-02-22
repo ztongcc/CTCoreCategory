@@ -7,36 +7,48 @@
 //
 
 #import "UIView+Push.h"
-#import "UIView+VC.h"
 #import "UIViewController+Push.h"
 
 @implementation UIView (Push)
 
+- (UIViewController *)viewController
+{
+    for (UIView* next = [self superview]; next; next = next.superview)
+    {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+        {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
+}
+    
 - (void)back
 {
-    UIViewController *xx=[self viewController];
-    if (xx==nil)
+    UIViewController * vc = [self viewController];
+    if (vc == nil)
     {
         return;
     }
-    [xx back];
+    [vc back];
 }
 
 #pragma mark - push pop
 
-- (void)pushViewController:(UIViewController *)vc
+- (void)pushViewController:(Class)vc
 {
     UIViewController *xx=[self viewController];
     if (xx==nil)
     {
         return;
     }
-    [xx pushViewController:vc];
+    [xx pushToViewController:[vc class]];
 }
 
 - (void)popViewController
 {
-    UIViewController *xx=[self viewController];
+    UIViewController *xx = [self viewController];
     if (xx==nil)
     {
         return;
@@ -44,35 +56,23 @@
     [xx popViewController];
 }
 
--(void) popToViewController:(UIViewController *)vc
+- (void)popToViewController:(Class)vc
 {
     UIViewController *xx=[self viewController];
     if (xx==nil)
     {
         return;
     }
-    [xx popToViewController:vc];
+    [xx popToViewController:[vc class]];
 }
 
--(void) popToViewControllerWithClassName:(NSString *)className
+- (void)popToRootViewController
 {
     UIViewController *xx=[self viewController];
     if (xx==nil)
     {
         return;
     }
-    
-    [xx popToViewControllerWithClassName:className];
-}
-
--(void) popToRootViewController
-{
-    UIViewController *xx=[self viewController];
-    if (xx==nil)
-    {
-        return;
-    }
-    
     [xx popToRootViewController];
 }
 

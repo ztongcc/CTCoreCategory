@@ -128,12 +128,22 @@
     [self pushController:vc];
 }
 
-- (void)popViewControllerAnimated
+- (void)popViewController
 {
     [self popController:nil];
 }
+    
+- (void)popToRootController
+{
 
-- (void)popToViewControllerAnimated:(Class)vcClass
+    if ([self isKindOfClass:[UINavigationController class]]) {
+        [(UINavigationController *)self popToRootViewControllerAnimated:YES];
+    }else {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+}
+    
+- (void)popToViewController:(Class)vcClass
 {
     NSArray * controllerAry = self.navigationController.viewControllers;
     if (controllerAry.count == 1)
@@ -145,13 +155,13 @@
         __block BOOL pop;
         [controllerAry enumerateObjectsUsingBlock:^(UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
          {
-            if ([obj isMemberOfClass:[vcClass class]])
-            {
-                [self popController:obj];
-                pop = YES;
-                *stop = YES;
-            }
-        }];
+             if ([obj isMemberOfClass:[vcClass class]])
+             {
+                 [self popController:obj];
+                 pop = YES;
+                 *stop = YES;
+             }
+         }];
         if (!pop)
         {
             [self popController:nil];

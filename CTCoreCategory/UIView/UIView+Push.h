@@ -10,6 +10,9 @@
 
 @interface UIView (Push)
 
+
+- (UIViewController *)viewController;
+    
 /**
  *  返回方法
  */
@@ -22,7 +25,7 @@
  *
  *  @param vc 控制器
  */
-- (void)pushViewController:(UIViewController *)vc;
+- (void)pushViewController:(Class )vc;
 
 /**
  *  pop view所在的VC方法

@@ -82,8 +82,8 @@
     },
     {
       "name": "UIView",
-      "source_files": "CTCoreCategory/**/UIView+Extend.{h,m}",
-      "public_header_files": "CTCoreCategory/**/UIView+Extend.h"
+      "source_files": "CTCoreCategory/**/UIView+{Extend,Push}.{h,m}",
+      "public_header_files": "CTCoreCategory/**/UIView+{Extend,Push}.h"
     },
     {
       "name": "NSTimer",

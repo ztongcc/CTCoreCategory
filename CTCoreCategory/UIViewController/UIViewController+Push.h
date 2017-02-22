@@ -35,8 +35,10 @@
 
 - (void)pushToViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
 
-- (void)popViewControllerAnimated;
+- (void)popViewController;
+    
+- (void)popToRootController;
 
-- (void)popToViewControllerAnimated:(Class)vcClass;
+- (void)popToViewController:(Class)vcClass;
 
 @end
