@@ -10,6 +10,60 @@
 
 @implementation UIViewController (Push)
 
+- (UIViewController *)rootViewController
+{
+    UIViewController *rootVC = [[UIApplication sharedApplication] keyWindow].rootViewController;
+    return rootVC;
+}
+
+- (void)back
+{
+    if (self.presentingViewController != nil)
+    {
+        if (self.navigationController == nil)
+        {
+            [self dismissViewControllerAnimated:YES completion:nil];
+            return;
+        }
+        
+        NSArray *arr = self.navigationController.viewControllers;
+        if ([arr count] > 0)
+        {
+            if (self==self.navigationController.viewControllers[0])
+            {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            else
+            {
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }
+        else
+        {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+    }
+    else
+    {
+        if (self.navigationController == nil)
+        {
+            return;
+        }
+        
+        UIViewController *rootVC = [self rootViewController];
+        if ([rootVC isKindOfClass:[UINavigationController class]])
+        {
+            UINavigationController *rootNav= (UINavigationController *)rootVC;
+            [rootNav popViewControllerAnimated:YES];
+        }
+        else
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }
+}
+    
+
 - (void)pushController:(UIViewController *)vc
 {
     if ([self isKindOfClass:[UINavigationController class]])
@@ -56,7 +110,7 @@
     [self pushController:vc];
 }
 
-- (void)pushToXIBController:(Class)vcClass param:(void (^)(UIViewController * toVC))deliverParam
+- (void)pushToXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam
 {
     UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
     if (deliverParam) {
@@ -65,7 +119,7 @@
     [self pushController:vc];
 }
 
-- (void)pushToViewController:(Class)vcClass param:(void (^)(UIViewController * toVC))deliverParam
+- (void)pushToViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam
 {
     UIViewController * vc = [[vcClass  alloc] init];
     if (deliverParam) {
