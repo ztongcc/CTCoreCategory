@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
   end
 
 
- s.subspec 'NSMutableAttributedString' do |ss|
+   s.subspec 'NSMutableAttributedString' do |ss|
     ss.source_files = 'CTCoreCategory/**/NSMutableAttributedString+Attributes.{h,m}'
     ss.public_header_files = 'CTCoreCategory/**/NSMutableAttributedString+Attributes.h'
   end
@@ -54,9 +54,9 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'CTCoreCategory/**/UIAlertView+Additional.h'
   end
 
-  s.subspec 'UIController' do |ss|
-    ss.source_files = 'CTCoreCategory/**/UIViewController+Extend.{h,m}'
-    ss.public_header_files = 'CTCoreCategory/**/UIViewController+Extend.h'
+  s.subspec 'UIViewController' do |ss|
+   ss.source_files = 'CTCoreCategory/**/UIViewController+{Push,NavigationItem}.{h,m}'
+   ss.public_header_files = 'CTCoreCategory/**/UIViewController+{Push,NavigationItem}.h'
   end
 
   s.subspec 'UINavigationController' do |ss|

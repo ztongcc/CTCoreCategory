@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CTCoreCategory:
-    :commit: f576feae6e4f879146d834717ec4885839912140
+    :commit: fbde65ab40af98b1f572eb7f0d686c1d3efbf827
     :git: https://github.com/Excalibur-CT/CTCoreCategory.git
 
 SPEC CHECKSUMS:
