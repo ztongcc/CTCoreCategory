@@ -75,8 +75,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'UIView' do |ss|
-    ss.source_files = 'CTCoreCategory/**/UIView+Extend.{h,m}'
-    ss.public_header_files = 'CTCoreCategory/**/UIView+Extend.h'
+ss.source_files = 'CTCoreCategory/**/UIView+{Extend,Push}.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UIView+{Extend,Push}.h'
   end
 
     s.subspec 'NSTimer' do |ss|
