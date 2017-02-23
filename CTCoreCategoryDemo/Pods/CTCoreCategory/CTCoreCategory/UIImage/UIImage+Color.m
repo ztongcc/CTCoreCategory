@@ -11,11 +11,10 @@
 @implementation UIImage (Color)
 
 //给我一种颜色，一个尺寸，我给你返回一个UIImage
-+(UIImage *)imageFromContextWithColor:(UIColor *)color size:(CGSize)size
++(UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size
 {
     
     CGRect rect=(CGRect){{0.0f,0.0f},size};
-    
     //开启一个图形上下文
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
     
@@ -35,11 +34,10 @@
     return image;
 }
 
-+ (UIImage *)imageFromContextWithColor:(UIColor *)color{
-    
++ (UIImage *)imageWithColor:(UIColor *)color
+{
     CGSize size=CGSizeMake(1.0f, 1.0f);
-    
-    return [self imageFromContextWithColor:color size:size];
+    return [self imageWithColor:color size:size];
 }
 
 
@@ -59,8 +57,7 @@
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
     [tintColor setFill];
     CGRect bounds = CGRectMake(0, 0, self.size.width, self.size.height);
-    UIRectFill(bounds);
-    
+    UIRectFill(bounds);    
     //Draw the tinted image in context
     [self drawInRect:bounds blendMode:blendMode alpha:1.0f];
     

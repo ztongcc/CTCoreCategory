@@ -77,7 +77,6 @@
         
         //添加
         [minusArray removeObject:obj];
-        
     }
     
     return minusArray;
