@@ -49,9 +49,9 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'CTCoreCategory/**/NSMutableAttributedString+Attributes.h'
   end
 
-  s.subspec 'UIAlertView' do |ss|
-    ss.source_files = 'CTCoreCategory/**/UIAlertView+Additional.{h,m}'
-    ss.public_header_files = 'CTCoreCategory/**/UIAlertView+Additional.h'
+  s.subspec 'UITextField' do |ss|
+    ss.source_files = 'CTCoreCategory/**/UITextField+Placeholder.{h,m}'
+    ss.public_header_files = 'CTCoreCategory/**/UITextField+Placeholder.h'
   end
 
   s.subspec 'UIViewController' do |ss|

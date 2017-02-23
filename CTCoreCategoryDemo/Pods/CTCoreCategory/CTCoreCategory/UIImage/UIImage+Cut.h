@@ -19,16 +19,16 @@
 /**
  *  从给定UIView中截图：UIView转UIImage
  */
-+ (UIImage *)cutFromView:(UIView *)view;
++(UIImage *)cutFromView:(UIView *)view;
 
 /**
  *  直接截屏
  */
-+ (UIImage *)cutScreen;
++(UIImage *)cutScreen;
 
 /**
  *  从给定UIImage和指定Frame截图：
  */
-- (UIImage *)cutWithFrame:(CGRect)frame;
+-(UIImage *)cutWithFrame:(CGRect)frame;
 
 @end
