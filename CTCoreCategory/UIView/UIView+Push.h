@@ -37,14 +37,8 @@
  *
  *  @param vc 控制器
  */
--(void) popToViewController:(UIViewController *)vc;
+-(void)popToViewController:(Class )vc;
 
-/**
- *  pop方法
- *
- *  @param className to控制器
- */
--(void) popToViewControllerWithClassName:(NSString *)className;
 
 /**
  *  pop到root
@@ -54,9 +48,17 @@
 #pragma mark - present dismiss
 
 /**
- *  pop模态视图
+ *  模态视图
  */
-- (void)presentViewController:(UIViewController *)vc;
+- (void)presentController:(UIViewController *)vc;
+
+- (void)presentViewController:(Class)vc;
+
+- (void)presentViewControllerInNavagation:(Class)vcClass;
+
+- (void)presentXIBViewController:(Class)vcClass;
+
+- (void)presentXIBViewControllerInNavagation:(Class)vcClass;
 
 /**
  *  dismiss view所在的VC方法

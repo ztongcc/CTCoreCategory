@@ -39,65 +39,93 @@
 - (void)pushViewController:(Class)vc
 {
     UIViewController *xx=[self viewController];
-    if (xx==nil)
+    if (xx != nil)
     {
-        return;
+        [xx pushToViewController:[vc class]];
     }
-    [xx pushToViewController:[vc class]];
 }
 
 - (void)popViewController
 {
     UIViewController *xx = [self viewController];
-    if (xx==nil)
+    if (xx != nil)
     {
-        return;
+        [xx popViewController];
     }
-    [xx popViewController];
 }
 
 - (void)popToViewController:(Class)vc
 {
     UIViewController *xx=[self viewController];
-    if (xx==nil)
+    if (xx != nil)
     {
-        return;
+        [xx popToViewController:[vc class]];
     }
-    [xx popToViewController:[vc class]];
 }
 
 - (void)popToRootViewController
 {
-    UIViewController *xx=[self viewController];
-    if (xx==nil)
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
     {
-        return;
+        [xx popToRootViewController];
     }
-    [xx popToRootViewController];
 }
 
 #pragma mark - present dismiss
 
-- (void)presentViewController:(UIViewController *)vc
+- (void)presentController:(UIViewController *)vc
 {
-    UIViewController *xx=[self viewController];
-    if (xx==nil)
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
     {
-        return;
+        [xx presentController:vc];
     }
-    
-    [xx presentViewController:vc];
+}
+
+- (void)presentViewController:(Class)vcClass
+{
+    UIViewController * xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentViewController:vcClass];
+    }
+}
+
+- (void)presentViewControllerInNavagation:(Class)vcClass
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentViewControllerInNavagation:vcClass];
+    }
+}
+
+- (void)presentXIBViewController:(Class)vcClass
+{
+    UIViewController * xx = [self viewController];
+    if (xx!=nil)
+    {
+        [xx presentXIBViewController:vcClass];
+    }
+}
+
+- (void)presentXIBViewControllerInNavagation:(Class)vcClass
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentXIBViewControllerInNavagation:vcClass];
+    }
 }
 
 - (void)dismissViewController
 {
-    UIViewController *xx=[self viewController];
-    if (xx==nil)
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
     {
-        return;
+        [xx dismissViewController];
     }
-    
-    [xx dismissViewController];
 }
 
 @end

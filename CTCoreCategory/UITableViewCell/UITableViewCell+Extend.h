@@ -20,6 +20,17 @@
  */
 + (instancetype)ct_cellWithTableViewFromXIB:(UITableView *)tableView indentifier:(NSString *)indentifier;
 
+
+/**
+ *  创建cell ( indentifier 默认为Cell 类名 )
+ *
+ *  @param tableView   所属tableView
+ *
+ *  @return cell实例
+ */
++ (instancetype)ct_cellWithTableViewFromXIB:(UITableView *)tableView;
+
+
 /**
  *  创建 cell
  *
@@ -30,6 +41,16 @@
  *  @return cell实例
  */
 + (instancetype)ct_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style indentifier:(NSString *)indentifier;
+
+/**
+ *  创建 cell ( indentifier 默认为Cell 类名 )
+ *
+ *  @param tableView   所属tableView
+ *  @param style       UITableViewCellStyle
+ *
+ *  @return cell实例
+ */
++ (instancetype)ct_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style;
 /**
  *  创建 cell
  *
@@ -39,5 +60,14 @@
  *  @return cell实例
  */
 + (instancetype)ct_cellDefaultWithTableView:(UITableView *)tableView indentifier:(NSString *)indentifier;
+
+/**
+ *  创建 cell ( indentifier 默认为Cell 类名 )
+ *
+ *  @param tableView    所属tableView
+ *
+ *  @return cell实例
+ */
++ (instancetype)ct_cellDefaultWithTableView:(UITableView *)tableView;
 
 @end

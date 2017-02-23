@@ -37,8 +37,22 @@
 
 - (void)popViewController;
     
-- (void)popToRootController;
+- (void)popToRootViewController;
 
 - (void)popToViewController:(Class)vcClass;
+
+
+#pragma mark - present -
+- (void)presentController:(UIViewController *)controller;
+
+- (void)presentViewController:(Class)vcClass;
+
+- (void)presentViewControllerInNavagation:(Class)vcClass;
+
+- (void)presentXIBViewController:(Class)vcClass;
+
+- (void)presentXIBViewControllerInNavagation:(Class)vcClass;
+
+- (void)dismissViewController;
 
 @end

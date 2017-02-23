@@ -133,7 +133,7 @@
     [self popController:nil];
 }
     
-- (void)popToRootController
+- (void)popToRootViewController
 {
 
     if ([self isKindOfClass:[UINavigationController class]]) {
@@ -167,6 +167,51 @@
             [self popController:nil];
         }
     }
+}
+
+- (void)presentController:(UIViewController *)controller
+{
+    if (controller) {
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
+
+- (void)presentViewController:(Class)vcClass
+{
+    UIViewController * vc = [[vcClass  alloc] init];
+    if (vc) {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+- (void)presentViewControllerInNavagation:(Class)vcClass
+{
+    UIViewController * vc = [[vcClass  alloc] init];
+    if (vc) {
+        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+}
+
+- (void)presentXIBViewController:(Class)vcClass
+{
+    UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
+    if (vc) {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+- (void)presentXIBViewControllerInNavagation:(Class)vcClass
+{
+    UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
+    UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+
+}
+
+- (void)dismissViewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
