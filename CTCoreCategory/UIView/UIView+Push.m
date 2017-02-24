@@ -36,12 +36,48 @@
 
 #pragma mark - push pop
 
-- (void)pushViewController:(Class)vc
+- (void)pushToViewController:(Class)vc
 {
     UIViewController *xx=[self viewController];
     if (xx != nil)
     {
         [xx pushToViewController:[vc class]];
+    }
+}
+
+- (void)pushToXIBController:(Class)vcClass
+{
+    UIViewController *xx=[self viewController];
+    if (xx != nil)
+    {
+        [xx pushToXIBController:vcClass];
+    }
+}
+
+- (void)pushToController:(UIViewController *)vc
+{
+    UIViewController *xx=[self viewController];
+    if (xx != nil)
+    {
+        [xx pushToController:vc];
+    }
+}
+
+- (void)pushToXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx=[self viewController];
+    if (xx != nil)
+    {
+        [xx pushToXIBController:vcClass param:deliverParam];
+    }
+}
+
+- (void)pushToViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx=[self viewController];
+    if (xx != nil)
+    {
+        [xx pushToViewController:vcClass param:deliverParam];
     }
 }
 
@@ -92,30 +128,66 @@
     }
 }
 
-- (void)presentViewControllerInNavagation:(Class)vcClass
+- (void)presentViewControllerInNavigation:(Class)vcClass
 {
     UIViewController *xx = [self viewController];
     if (xx != nil)
     {
-        [xx presentViewControllerInNavagation:vcClass];
+        [xx presentViewControllerInNavigation:vcClass];
     }
 }
 
-- (void)presentXIBViewController:(Class)vcClass
+- (void)presentXIBController:(Class)vcClass
 {
     UIViewController * xx = [self viewController];
     if (xx!=nil)
     {
-        [xx presentXIBViewController:vcClass];
+        [xx presentXIBController:vcClass];
     }
 }
 
-- (void)presentXIBViewControllerInNavagation:(Class)vcClass
+- (void)presentXIBControllerInNavigation:(Class)vcClass
 {
     UIViewController *xx = [self viewController];
     if (xx != nil)
     {
-        [xx presentXIBViewControllerInNavagation:vcClass];
+        [xx presentXIBControllerInNavigation:vcClass];
+    }
+}
+
+- (void)presentViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentViewControllerInNavigation:vcClass param:deliverParam];
+    }
+}
+
+- (void)presentViewControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentViewControllerInNavigation:vcClass param:deliverParam];
+    }
+}
+
+- (void)presentXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentXIBController:vcClass param:deliverParam];
+    }
+}
+
+- (void)presentXIBControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController *xx = [self viewController];
+    if (xx != nil)
+    {
+        [xx presentXIBControllerInNavigation:vcClass param:deliverParam];
     }
 }
 

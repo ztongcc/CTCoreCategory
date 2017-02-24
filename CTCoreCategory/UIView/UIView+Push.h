@@ -25,7 +25,15 @@
  *
  *  @param vc 控制器
  */
-- (void)pushViewController:(Class )vc;
+- (void)pushToViewController:(Class)vcClass;
+
+- (void)pushToXIBController:(Class)vcClass;
+
+- (void)pushToController:(UIViewController *)vc;
+
+- (void)pushToXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)pushToViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
 
 /**
  *  pop view所在的VC方法
@@ -54,11 +62,19 @@
 
 - (void)presentViewController:(Class)vc;
 
-- (void)presentViewControllerInNavagation:(Class)vcClass;
+- (void)presentViewControllerInNavigation:(Class)vcClass;
 
-- (void)presentXIBViewController:(Class)vcClass;
+- (void)presentXIBController:(Class)vcClass;
 
-- (void)presentXIBViewControllerInNavagation:(Class)vcClass;
+- (void)presentXIBControllerInNavigation:(Class)vcClass;
+
+- (void)presentViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentViewControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentXIBControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam;
 
 /**
  *  dismiss view所在的VC方法

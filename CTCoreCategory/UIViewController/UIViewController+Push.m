@@ -110,6 +110,18 @@
     [self pushController:vc];
 }
 
+- (void)pushToController:(UIViewController *)vc
+{
+    if (self.navigationController) {
+        [self.navigationController pushViewController:vc animated:YES];
+    }else {
+        UINavigationController * rootVC = (UINavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+        if ([rootVC isKindOfClass:[UINavigationController class]]) {
+            [rootVC pushViewController:vc animated:YES];
+        }
+    }
+}
+
 - (void)pushToXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam
 {
     UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
@@ -184,7 +196,7 @@
     }
 }
 
-- (void)presentViewControllerInNavagation:(Class)vcClass
+- (void)presentViewControllerInNavigation:(Class)vcClass
 {
     UIViewController * vc = [[vcClass  alloc] init];
     if (vc) {
@@ -193,7 +205,7 @@
     }
 }
 
-- (void)presentXIBViewController:(Class)vcClass
+- (void)presentXIBController:(Class)vcClass
 {
     UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
     if (vc) {
@@ -201,9 +213,55 @@
     }
 }
 
-- (void)presentXIBViewControllerInNavagation:(Class)vcClass
+- (void)presentXIBControllerInNavigation:(Class)vcClass
 {
     UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
+    if (vc) {
+        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+}
+
+- (void)presentViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController * vc = [[vcClass  alloc] init];
+    if (deliverParam) {
+        deliverParam(vc);
+    }
+    if (vc) {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+- (void)presentViewControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController * vc = [[vcClass  alloc] init];
+    if (deliverParam) {
+        deliverParam(vc);
+    }
+    if (vc) {
+        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+}
+
+- (void)presentXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
+    if (deliverParam) {
+        deliverParam(vc);
+    }
+    if (vc) {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}
+
+- (void)presentXIBControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam
+{
+    UIViewController * vc = [[vcClass  alloc] initWithNibName:NSStringFromClass([vcClass class]) bundle:nil];
+    if (deliverParam) {
+        deliverParam(vc);
+    }
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
 

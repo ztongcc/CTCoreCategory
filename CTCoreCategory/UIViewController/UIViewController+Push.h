@@ -31,6 +31,8 @@
 
 - (void)pushToViewController:(Class)vcClass;
 
+- (void)pushToController:(UIViewController *)vc;
+
 - (void)pushToXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
 
 - (void)pushToViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
@@ -41,17 +43,24 @@
 
 - (void)popToViewController:(Class)vcClass;
 
-
 #pragma mark - present -
 - (void)presentController:(UIViewController *)controller;
 
 - (void)presentViewController:(Class)vcClass;
 
-- (void)presentViewControllerInNavagation:(Class)vcClass;
+- (void)presentViewControllerInNavigation:(Class)vcClass;
 
-- (void)presentXIBViewController:(Class)vcClass;
+- (void)presentXIBController:(Class)vcClass;
 
-- (void)presentXIBViewControllerInNavagation:(Class)vcClass;
+- (void)presentXIBControllerInNavigation:(Class)vcClass;
+
+- (void)presentViewController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentViewControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentXIBController:(Class)vcClass param:(void (^)(id toVC))deliverParam;
+
+- (void)presentXIBControllerInNavigation:(Class)vcClass param:(void (^)(id toVC))deliverParam;
 
 - (void)dismissViewController;
 

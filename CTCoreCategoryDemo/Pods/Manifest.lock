@@ -7,10 +7,10 @@ PODS:
     - CTCoreCategory/NSObject (= 0.0.1)
     - CTCoreCategory/NSString (= 0.0.1)
     - CTCoreCategory/NSTimer (= 0.0.1)
-    - CTCoreCategory/UIAlertView (= 0.0.1)
     - CTCoreCategory/UIImage (= 0.0.1)
     - CTCoreCategory/UINavigationController (= 0.0.1)
     - CTCoreCategory/UITableViewCell (= 0.0.1)
+    - CTCoreCategory/UITextField (= 0.0.1)
     - CTCoreCategory/UIView (= 0.0.1)
     - CTCoreCategory/UIViewController (= 0.0.1)
   - CTCoreCategory/NSArray (0.0.1)
@@ -20,10 +20,10 @@ PODS:
   - CTCoreCategory/NSObject (0.0.1)
   - CTCoreCategory/NSString (0.0.1)
   - CTCoreCategory/NSTimer (0.0.1)
-  - CTCoreCategory/UIAlertView (0.0.1)
   - CTCoreCategory/UIImage (0.0.1)
   - CTCoreCategory/UINavigationController (0.0.1)
   - CTCoreCategory/UITableViewCell (0.0.1)
+  - CTCoreCategory/UITextField (0.0.1)
   - CTCoreCategory/UIView (0.0.1)
   - CTCoreCategory/UIViewController (0.0.1)
 
@@ -36,11 +36,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CTCoreCategory:
-    :commit: 4302fc33615c9218b129e0484c4565d65359f6a6
+    :commit: cb02fe2740942bf2d9ff901d4c18cfdf1eeafd41
     :git: https://github.com/Excalibur-CT/CTCoreCategory.git
 
 SPEC CHECKSUMS:
-  CTCoreCategory: 8a9c49e2a5d829c980ea669f5aafdd0fce8c606c
+  CTCoreCategory: 1500fc00ee9ad6f6fa2b2bc625a7ab18b5678635
 
 PODFILE CHECKSUM: 6542375c3cf9b705d210ea614b1980276a8660bb
 
